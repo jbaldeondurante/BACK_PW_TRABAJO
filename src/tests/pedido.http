@@ -1,0 +1,38 @@
+# Obtener todos los pedidos
+GET http://localhost:4001/pedido
+
+###
+
+# Obtener un pedido por ID
+GET http://localhost:4001/pedido/1
+
+###
+
+# Crear un nuevo pedido
+POST http://localhost:4001/pedido
+Content-Type: application/json
+
+{
+    "idUsuario": 2,
+    "total": 320.50,
+    "direccionEnvio": "Av. Universitaria 123, Lima",
+    "metodoPago": "tarjeta"
+}
+
+###
+
+# Actualizar un pedido existente
+PUT http://localhost:4001/pedido/2
+Content-Type: application/json
+
+{
+    "total": 350.75,
+    "direccionEnvio": "Av. Universitaria 321, Lima",
+    "metodoPago": "yape",
+    "estado": "pagado"
+}
+
+###
+
+# Eliminar un pedido
+DELETE http://localhost:4001/pedido/1

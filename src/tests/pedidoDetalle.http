@@ -1,0 +1,38 @@
+### Obtener todos los detalles de pedidos
+GET http://localhost:4001/pedidoDetalle
+
+###
+
+### Obtener un detalle de pedido específico por ID
+GET http://localhost:4001/pedidoDetalle/2
+
+###
+
+### Crear un nuevo detalle de pedido
+POST http://localhost:4001/pedidoDetalle
+Content-Type: application/json
+
+{
+    "idPedido": 2,
+    "idProducto": 2,
+    "cantidad": 3,
+    "subtotal": 450.00
+}
+
+###
+
+### Actualizar un detalle de pedido existente
+PUT http://localhost:4001/pedidoDetalle/2
+Content-Type: application/json
+
+{
+    "idPedido": 2,
+    "idProducto": 2,
+    "cantidad": 5,
+    "subtotal": 250.0
+}
+
+###
+
+### Eliminar un detalle de pedido por ID
+DELETE http://localhost:4001/pedidoDetalle/1

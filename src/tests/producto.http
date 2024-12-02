@@ -1,0 +1,160 @@
+# Obtener todos los productos
+GET http://localhost:4001/productos
+
+###
+
+# Obtener un producto por ID
+GET http://localhost:4001/productos/1
+
+###
+
+# Crear un nuevo producto
+POST http://localhost:4001/productos
+Content-Type: application/json
+
+{
+    "nombre": "S.H.Figuarts SON GOKU - DRAGON BALL Z",
+    "precioReserva": 30.0,
+    "precioTotal": 150.0,
+    "llegadaAprox": "2025-07-15",
+    "envioGratis": true,
+    "tipo": "preventa",
+    "serie": "Dragon Ball Z",
+    "categoria": "Figura de Acción",
+    "especificaciones": {
+        "marca": "BANDAI",
+        "linea": "S.H.Figuarts",
+        "material": "PVC, ABS",
+        "altura": "155 mm",
+        "contenido": [
+            "Main body",
+            "Interchangeable hands",
+            "Kamehameha effect"
+        ]
+    },
+    "etiquetas": ["Dragon Ball Z", "Goku"],
+    "imagenUrl": "/images/aki.jpg"
+}
+
+### Crear un nuevo producto
+POST http://localhost:4001/productos
+Content-Type: application/json
+
+{
+    "nombre": "S.H.Figuarts VEGETA - DRAGON BALL Z",
+    "precioReserva": 25.0,
+    "precioTotal": 140.0,
+    "llegadaAprox": "2025-08-01",
+    "envioGratis": true,
+    "tipo": "preventa",
+    "serie": "Dragon Ball Z",
+    "categoria": "Figura de Acción",
+    "especificaciones": {
+        "marca": "BANDAI",
+        "linea": "S.H.Figuarts",
+        "material": "PVC, ABS",
+        "altura": "150 mm",
+        "contenido": [
+            "Main body",
+            "Interchangeable hands",
+            "Interchangeable faces"
+        ]
+    },
+    "etiquetas": ["Dragon Ball Z", "Vegeta"],
+    "imagenUrl": "/images/vegeta.jpg"
+}
+
+###
+
+POST http://localhost:4001/productos
+Content-Type: application/json
+
+{
+    "nombre": "S.H.Figuarts ITACHI UCHIHA - NARUTO",
+    "precioReserva": 50.0,
+    "precioTotal": 200.0,
+    "llegadaAprox": "2025-06-01",
+    "envioGratis": true,
+    "tipo": "preventa",
+    "serie": "Naruto",
+    "categoria": "Figura de Acción",
+    "especificaciones": {
+        "marca": "BANDAI",
+        "linea": "S.H.Figuarts",
+        "material": "PVC, ABS",
+        "altura": "145 mm",
+        "contenido": [
+            "Main body",
+            "Interchangeable hands",
+            "Akatsuki cloak",
+            "Kusanagi sword"
+        ]
+    },
+    "etiquetas": ["Naruto", "Itachi"],
+    "imagenUrl": "/images/itachi.jpg"
+}
+
+###
+
+POST http://localhost:4001/productos
+Content-Type: application/json
+
+{
+    "nombre": "S.H.Figuarts MONKEY.D.LUFFY - ONE PIECE",
+    "precioReserva": 40.0,
+    "precioTotal": 180.0,
+    "llegadaAprox": "2025-05-20",
+    "envioGratis": false,
+    "tipo": "stock",
+    "serie": "One Piece",
+    "categoria": "Figura de Acción",
+    "especificaciones": {
+        "marca": "BANDAI",
+        "linea": "S.H.Figuarts",
+        "material": "PVC, ABS",
+        "altura": "145 mm",
+        "contenido": [
+            "Main body",
+            "Interchangeable hands",
+            "Straw hat"
+        ]
+    },
+    "etiquetas": ["One Piece", "Luffy"],
+    "imagenUrl": "/images/luffy.jpg"
+}
+
+###
+
+# Actualizar un producto
+PUT http://localhost:4001/productos
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nombre": "S.H.Figuarts SON GOKU - DRAGON BALL Z (Actualizado)",
+    "precioReserva": 40.0,
+    "precioTotal": 160.0,
+    "llegadaAprox": "2025-08-01",
+    "envioGratis": false,
+    "tipo": "stock",
+    "serie": "Dragon Ball Z",
+    "categoria": "Figura de Acción",
+    "especificaciones": {
+        "marca": "BANDAI",
+        "linea": "S.H.Figuarts",
+        "material": "PVC, ABS",
+        "altura": "155 mm",
+        "contenido": [
+            "Main body",
+            "Interchangeable hands",
+            "Updated effect parts"
+        ]
+    },
+    "etiquetas": ["Dragon Ball Z", "Goku"],
+    "imagenUrl": "/images/itachi.jpg"
+}
+
+###
+
+# Eliminar un producto
+DELETE http://localhost:4001/productos/1

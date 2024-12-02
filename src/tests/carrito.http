@@ -1,0 +1,34 @@
+# Obtener todos los productos en el carrito de un usuario
+GET http://localhost:4001/carrito/1
+
+###
+
+# Agregar un producto al carrito
+POST http://localhost:4001/carrito
+Content-Type: application/json
+
+{
+    "idUsuario": 3,
+    "idProducto": 3,
+    "cantidad": 2
+}
+
+###
+
+# Actualizar la cantidad de un producto en el carrito
+PUT http://localhost:4001/carrito/1
+Content-Type: application/json
+
+{
+    "cantidad": 5
+}
+
+###
+
+# Eliminar un producto del carrito
+DELETE http://localhost:4001/carrito/1
+
+###
+
+# Vaciar el carrito de un usuario
+DELETE http://localhost:4001/carrito/vaciar/1

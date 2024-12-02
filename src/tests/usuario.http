@@ -1,0 +1,114 @@
+### Obtener todos los usuarios
+GET http://localhost:4001/usuarios
+
+###
+
+### Obtener un usuario por ID
+GET http://localhost:4001/usuarios/1
+
+###
+
+### Crear un nuevo usuario
+POST http://localhost:4001/usuarios
+Content-Type: application/json
+
+{
+    "nombre": "Carlos",
+    "apellido": "Gómez",
+    "correo": "carlos.gomez@example.com",
+    "contraseña": "password123",
+    "rol": "cliente",
+    "fecha_registro": "2024-12-03"
+}
+
+###
+
+POST http://localhost:4001/usuarios
+Content-Type: application/json
+
+{
+    "nombre": "María",
+    "apellido": "Pérez",
+    "correo": "maria.perez@example.com",
+    "contraseña": "mypassword123",
+    "rol": "cliente",
+    "fecha_registro": "2024-12-03"
+}
+
+###
+
+POST http://localhost:4001/usuarios
+Content-Type: application/json
+
+{
+    "nombre": "Luis",
+    "apellido": "Ramírez",
+    "correo": "luis.ramirez@example.com",
+    "contraseña": "secure456",
+    "rol": "administrador",
+    "fecha_registro": "2024-12-01"
+}
+
+###
+
+POST http://localhost:4001/usuarios
+Content-Type: application/json
+
+{
+    "nombre": "Sofía",
+    "apellido": "López",
+    "correo": "sofia.lopez@example.com",
+    "contraseña": "adminsecure123",
+    "rol": "administrador",
+    "fecha_registro": "2024-12-02"
+}
+
+###
+
+POST http://localhost:4001/usuarios
+Content-Type: application/json
+
+{
+    "nombre": "David",
+    "apellido": "Hernández",
+    "correo": "david.hernandez@example.com",
+    "contraseña": "client123",
+    "rol": "cliente",
+    "fecha_registro": "2024-12-04"
+}
+
+###
+
+POST http://localhost:4001/usuarios
+Content-Type: application/json
+
+{
+    "nombre": "Lucía",
+    "apellido": "Morales",
+    "correo": "lucia.morales@example.com",
+    "contraseña": "passwordsecure",
+    "rol": "cliente",
+    "fecha_registro": "2024-12-05"
+}
+
+
+###
+
+### Actualizar un usuario existente
+PUT http://localhost:4001/usuarios
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nombre": "Ana",
+    "apellido": "Martínez",
+    "correo": "ana.martinez@example.com",
+    "contraseña": "newpassword123",
+    "rol": "administrador",
+    "fecha_registro": "2024-12-02"
+}
+
+###
+
+### Eliminar un usuario por ID
+DELETE http://localhost:4001/usuarios/1
